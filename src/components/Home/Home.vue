@@ -1,4 +1,6 @@
 <script setup>
+    import { ref } from 'vue';
+
     import Wix3 from '@/assets/Media/Wix 3.mp4';
     import VillaCaliza from '@/assets/Media/Villa Caliza.jpg';
     import BoFDalenum from '@/assets/Media/BoF Dalénum förskola.jpg';
@@ -14,6 +16,16 @@
     import LinneaBarnrum from '@/assets/Media/Linnea_barnrum.jpg';
     import Sovrum02 from '@/assets/Media/sovrum_02 kopiera_low.jpg';
     import AlviksStrand from '@/assets/Media/BoF Alviks strand.jpg';
+
+    const myVideo = ref(null);
+
+    const togglePlay = () => {
+        if (myVideo.value.paused) {
+            myVideo.value.play();
+        } else {
+            myVideo.value.pause();
+        }
+    };
 </script>
 
 <template>
@@ -27,7 +39,11 @@
                 <div class="navbarLinks">
                     <a class="nav-link" href="#visualization">Visualization</a>
                     <a class="nav-link" href="#VR">VR</a>
-                    <a class="nav-link" href="#">Frontend</a>
+                    <a
+                        class="nav-link"
+                        href="./components/Frontend/Frontend.vue"
+                        >Frontend</a
+                    >
                     <a class="nav-link" id="contact-link" href="#contact"
                         >Contact</a
                     >
@@ -37,7 +53,14 @@
         </div>
         <div class="col, video">
             <div class="videoPlay">
-                <video autoplay muted controls loop preload="none">
+                <video
+                    ref="myVideo"
+                    autoplay
+                    muted
+                    loop
+                    @click="togglePlay"
+                    class="video-player"
+                >
                     <source :src="Wix3" type="video/mp4" />
                 </video>
                 <p>

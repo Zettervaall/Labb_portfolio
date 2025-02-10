@@ -2,6 +2,10 @@
     import { ref } from 'vue';
 </script>
 
-<template></template>
+<template>
+    <div>
+        <h1>hej</h1>
+    </div>
+</template>
 
 <style scoped></style>
