@@ -41,7 +41,7 @@
                     <a class="nav-link" href="#VR">VR</a>
                     <a
                         class="nav-link"
-                        href="./components/Frontend/Frontend.vue"
+                        href="/Frontend"
                         >Frontend</a
                     >
                     <a class="nav-link" id="contact-link" href="#contact"
