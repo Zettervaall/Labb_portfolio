@@ -3,9 +3,14 @@
 </script>
 
 <template>
-    <div>
-        <h1>hej</h1>
-    </div>
+    <div class="body"></div>
 </template>
 
-<style scoped></style>
+<style scoped>
+    .body {
+        padding: 100px;
+        max-width: 100%;
+        overflow-x: hidden;
+        background-color: rgb(253, 93, 35);
+    }
+</style>

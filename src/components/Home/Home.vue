@@ -29,125 +29,125 @@
 </script>
 
 <template>
-    <div class="row align-items-start">
-        <div class="col, navBarMenu">
-            <div class="navName">
-                <h1 id="moa">Moa</h1>
-                <h1 id="zettervall">Zettervall</h1>
-            </div>
-            <nav>
-                <div class="navbarLinks">
-                    <a class="nav-link" href="#visualization">Visualization</a>
-                    <a class="nav-link" href="#VR">VR</a>
-                    <a
-                        class="nav-link"
-                        href="/Frontend"
-                        >Frontend</a
-                    >
-                    <a class="nav-link" id="contact-link" href="#contact"
-                        >Contact</a
-                    >
-                    <a class="nav-link" id="CV-link" href="#">CV</a>
+    <div class="body">
+        <div class="row align-items-start">
+            <div class="col, navBarMenu">
+                <div class="navName">
+                    <h1 id="moa">Moa</h1>
+                    <h1 id="zettervall">Zettervall</h1>
                 </div>
-            </nav>
-        </div>
-        <div class="col, video">
-            <div class="videoPlay">
-                <video
-                    ref="myVideo"
-                    autoplay
-                    muted
-                    loop
-                    @click="togglePlay"
-                    class="video-player"
-                >
-                    <source :src="Wix3" type="video/mp4" />
-                </video>
-                <p>
-                    Ongoing project. 3Ds Max, V-Ray, Unreal Engine & After
-                    Effects
-                </p>
+                <nav>
+                    <div class="navbarLinks">
+                        <a class="nav-link" href="#visualization"
+                            >Visualization</a
+                        >
+                        <a class="nav-link" href="#VR">VR</a>
+                        <a class="nav-link" href="/Frontend">Frontend</a>
+                        <a class="nav-link" id="contact-link" href="#contact"
+                            >Contact</a
+                        >
+                        <a class="nav-link" id="CV-link" href="#">CV</a>
+                    </div>
+                </nav>
+            </div>
+            <div class="col, video">
+                <div class="videoPlay">
+                    <video
+                        ref="myVideo"
+                        autoplay
+                        muted
+                        loop
+                        @click="togglePlay"
+                        class="video-player"
+                    >
+                        <source :src="Wix3" type="video/mp4" />
+                    </video>
+                    <p>
+                        Ongoing project. 3Ds Max, V-Ray, Unreal Engine & After
+                        Effects
+                    </p>
+                </div>
             </div>
         </div>
+
+        <section class="visualization" id="visualization">
+            <h2 class="headline">visualization</h2>
+            <div class="viz">
+                <img :src="VillaCaliza" alt="Villa Caliza" />
+                <p>Villa Caliza, Gotland</p>
+                <p>Brunnberg & Forshed Arkitektkontor</p>
+                <p>3ds Max, V-Ray, Photoshop</p>
+            </div>
+
+            <div class="viz">
+                <img :src="BoFDalenum" alt="Dalénum" />
+                <p>Dalénum school</p>
+            </div>
+
+            <div class="viz">
+                <img :src="Lillgardsskolan" alt="Lillgårdsskolan" />
+                <p>Lillgårdsskolan</p>
+            </div>
+
+            <div class="viz">
+                <img :src="VillaCaliza02" alt="Villa Caliza" />
+                <p>Villa Caliza</p>
+            </div>
+
+            <div class="viz">
+                <img :src="DinnerTable" alt="Dinner Table" />
+                <p>Viskafors</p>
+            </div>
+
+            <div class="viz">
+                <img :src="Vy01Kvall" alt="Viskafors" />
+                <p>Viskafors</p>
+            </div>
+
+            <div class="viz">
+                <img :src="Vy05" alt="Viskafors" />
+                <p>Viskafors</p>
+            </div>
+
+            <div class="viz">
+                <img :src="Vy02" alt="Viskafors" />
+                <p>Viskafors</p>
+            </div>
+
+            <div class="viz">
+                <img :src="Vy03" alt="Viskafors" />
+                <p>Viskafors</p>
+            </div>
+
+            <div class="viz">
+                <img :src="Port108" alt="Viskafors" />
+                <p>Viskafors</p>
+            </div>
+
+            <div class="viz">
+                <img :src="LinneaBarnrum" alt="Viskafors" />
+                <p>Viskafors</p>
+            </div>
+
+            <div class="viz">
+                <img :src="Sovrum02" alt="Viskafors" />
+                <p>Viskafors</p>
+            </div>
+
+            <div class="viz">
+                <img :src="AlviksStrand" alt="Viskafors" />
+                <p>Viskafors</p>
+            </div>
+        </section>
+
+        <h3 class="headline" id="VR">VR</h3>
+
+        <h4 class="headline">frontend</h4>
+
+        <footer>
+            <h5 class="headline" id="contact">contact</h5>
+        </footer>
     </div>
-
-    <section class="visualization" id="visualization">
-        <h2 class="headline">visualization</h2>
-        <div class="viz">
-            <img :src="VillaCaliza" alt="Villa Caliza" />
-            <p>Villa Caliza, Gotland</p>
-            <p>Brunnberg & Forshed Arkitektkontor</p>
-            <p>3ds Max, V-Ray, Photoshop</p>
-        </div>
-
-        <div class="viz">
-            <img :src="BoFDalenum" alt="Dalénum" />
-            <p>Dalénum school</p>
-        </div>
-
-        <div class="viz">
-            <img :src="Lillgardsskolan" alt="Lillgårdsskolan" />
-            <p>Lillgårdsskolan</p>
-        </div>
-
-        <div class="viz">
-            <img :src="VillaCaliza02" alt="Villa Caliza" />
-            <p>Villa Caliza</p>
-        </div>
-
-        <div class="viz">
-            <img :src="DinnerTable" alt="Dinner Table" />
-            <p>Viskafors</p>
-        </div>
-
-        <div class="viz">
-            <img :src="Vy01Kvall" alt="Viskafors" />
-            <p>Viskafors</p>
-        </div>
-
-        <div class="viz">
-            <img :src="Vy05" alt="Viskafors" />
-            <p>Viskafors</p>
-        </div>
-
-        <div class="viz">
-            <img :src="Vy02" alt="Viskafors" />
-            <p>Viskafors</p>
-        </div>
-
-        <div class="viz">
-            <img :src="Vy03" alt="Viskafors" />
-            <p>Viskafors</p>
-        </div>
-
-        <div class="viz">
-            <img :src="Port108" alt="Viskafors" />
-            <p>Viskafors</p>
-        </div>
-
-        <div class="viz">
-            <img :src="LinneaBarnrum" alt="Viskafors" />
-            <p>Viskafors</p>
-        </div>
-
-        <div class="viz">
-            <img :src="Sovrum02" alt="Viskafors" />
-            <p>Viskafors</p>
-        </div>
-
-        <div class="viz">
-            <img :src="AlviksStrand" alt="Viskafors" />
-            <p>Viskafors</p>
-        </div>
-    </section>
-
-    <h3 class="headline" id="VR">VR</h3>
-
-    <h4 class="headline">frontend</h4>
-
-    <footer>
-        <h5 class="headline" id="contact">contact</h5>
-    </footer>
 </template>
 
 <style scoped>
@@ -181,7 +181,7 @@
         src: url(Media/Fonts/Cormorant/CormorantGaramond-LightItalic.ttf);
     }
 
-    body {
+    .body {
         max-width: 100%;
         overflow-x: hidden;
     }
@@ -247,15 +247,12 @@
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-top: 15rem;
+        margin-top: 10rem;
         width: 100%; /* Video tar upp hela bredden */
         padding: 10px;
     }
 
     .videoPlay video {
-        /* display: flex;
-    align-items: center;
-    justify-content: center; */
         height: auto;
         width: 800px;
     }
@@ -307,93 +304,100 @@
         background-color: rgb(255, 252, 247);
     }
 
-    /* Mindre skärmar */
-    @media (max-width: 768px) {
-        .navBarMenu {
-            width: 100%; /* Gör navbaren fullbredd på små skärmar */
-            position: static; /* Placera den ovanför innehållet */
+    .navBarMenu {
+        width: 100%; /* Gör navbaren fullbredd på små skärmar */
+        position: static; /* Placera den ovanför innehållet */
 
-            padding: 10px;
-        }
-        .contentContainer {
-            margin-left: 0;
-            flex-direction: column;
-        }
-
-        .videoPlay video {
-            width: 100%; /* Anpassa video till mobilbredd */
-            height: auto;
-        }
+        padding: 10px;
+    }
+    .contentContainer {
+        margin-left: 0;
+        flex-direction: column;
     }
 
-    /* Större skärmar */
-    @media (min-width: 1500px) {
-        .containerFirstpage {
-            border: 1px solid black;
-            background-color: rgb(255, 246, 232);
-            display: flex;
-            justify-content: start;
-            align-items: flex-start;
-        }
+    .containerFirstpage {
+        border: 1px solid black;
+        background-color: rgb(255, 246, 232);
+        display: flex;
+        justify-content: start;
+        align-items: flex-start;
+    }
 
-        #moa {
-            font-size: 5rem;
-        }
-        #zettervall {
-            font-size: 5rem;
-        }
+    .navName > h1 {
+        font-size: 4rem;
+    }
 
-        /* NAVBAR */
-        .navName {
-            white-space: pre-line;
-            font-size: 4rem;
-            margin-left: 1rem;
-            margin-top: 1rem;
-        }
+    /* NAVBAR */
+    .navName {
+        white-space: pre-line;
+        font-size: 4rem;
+        margin-left: 1rem;
+        margin-top: 1rem;
+    }
 
-        .navBarMenu {
-            width: 200px;
-            position: fixed;
-            margin-left: 1rem;
-            margin-top: 0;
-            height: 100%; /* Full höjd */
+    .navBarMenu {
+        width: 200px;
+        position: fixed;
+        margin-left: 1rem;
+        margin-top: 0;
+        height: 100%; /* Full höjd */
 
-            padding: 20px;
-        }
+        padding: 20px;
+    }
 
-        .navbarLinks {
-            align-items: flex-start; /* Flytta länkar till vänster */
-            margin-left: 1rem;
-        }
+    .navbarLinks {
+        align-items: flex-start; /* Flytta länkar till vänster */
+        margin-left: 1rem;
+    }
 
-        .videoPlay > video {
-            margin: auto;
-        }
+    .viz > p {
+        font-size: 0.7rem;
+    }
 
-        .viz > p {
-            font-size: 0.7rem;
-        }
+    .headline {
+        margin-top: 20rem;
+    }
 
-        .headline {
-            margin-top: 20rem;
-        }
+    .visualization {
+        margin-top: 100px;
+        /* background-color: brown; */
+    }
 
-        .visualization {
-            margin-top: 100px;
-            /* background-color: brown; */
-        }
-
-        /* VISUALIZATIONS */
-        /* .viz {
+    /* VISUALIZATIONS */
+    /* .viz {
         margin: auto;
         height: auto;
         width: 900px;
     } */
 
-        .viz {
-            margin: auto;
-            height: auto;
-            width: 800px;
+    .viz {
+        margin: auto;
+        height: auto;
+        width: 800px;
+    }
+
+    /* Mindre skärmar */
+
+    @media (max-width: 1500px) {
+        .navBarMenu {
+            position: fixed;
+            width: 100%;
+            padding-bottom: 2rem;
         }
+
+        .navName > h1 {
+            margin-top: 0;
+
+            width: 100%;
+            background-color: white;
+        }
+
+        .videoPlay {
+            margin-top: 14rem;
+            width: 100%;
+        }
+    }
+/* Små skärmar och mobil */
+    @media (max-width: 1140px) {
     }
 </style>
