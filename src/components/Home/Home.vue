@@ -16,6 +16,7 @@
     import LinneaBarnrum from '@/assets/Media/Linnea_barnrum.jpg';
     import Sovrum02 from '@/assets/Media/sovrum_02 kopiera_low.jpg';
     import AlviksStrand from '@/assets/Media/BoF Alviks strand.jpg';
+    import Contact from '../../views/Contact.vue';
 
     const myVideo = ref(null);
 
@@ -142,10 +143,9 @@
 
         <h3 class="headline" id="VR">VR</h3>
 
-        <h4 class="headline">frontend</h4>
-
         <footer>
             <h5 class="headline" id="contact">contact</h5>
+            <Contact />
         </footer>
     </div>
 </template>
@@ -397,7 +397,7 @@
             width: 100%;
         }
     }
-/* Små skärmar och mobil */
+    /* Små skärmar och mobil */
     @media (max-width: 1140px) {
     }
 </style>
