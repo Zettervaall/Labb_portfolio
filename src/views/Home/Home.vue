@@ -150,9 +150,14 @@
                 src="/src/assets/Media/Lasse_VR.mp4"
                 ref="video-vr"
                 muted
-                @click="togglePlay"
+                controls
             ></video>
-            <p>abput ideo</p>
+            <p>
+                Virtual tour of an architecturally detailed house, crafted using
+                tools such as Unreal Engine, 3ds Max, V-Ray, Datasmith and
+                Photoshop. Created for Visualisera and optimized for wireless
+                headsets.
+            </p>
         </div>
 
         <!--  <video ref="myVideo"
@@ -279,8 +284,8 @@
     }
 
     /* #contact-link {
-        margin-top: 2rem;
-    } */
+            margin-top: 2rem;
+        } */
 
     #contact {
         padding-top: 2rem;
@@ -325,7 +330,7 @@
         margin-top: 3rem;
     }
 
-    .viz:hover {
+    /* .viz:hover {
         color: #424242;
         -webkit-transition: all 0.3s ease-in;
         -moz-transition: all 0.3s ease-in;
@@ -334,9 +339,9 @@
         transition: all 0.3s ease-in;
         opacity: 1;
         transform: scale(1.15);
-        -ms-transform: scale(1.15); /* IE 9 */
-        -webkit-transform: scale(1.15); /* Safari and Chrome */
-    }
+        -ms-transform: scale(1.15);
+        -webkit-transform: scale(1.15);
+    } */
 
     .viz > p {
         font-family: MyFont6;
@@ -352,7 +357,7 @@
 
     .navBarMenu {
         width: 100%; /* Gör navbaren fullbredd på små skärmar */
-        position: static; /* Placera den ovanför innehållet */
+        position: absolute;
 
         padding: 10px;
     }
@@ -404,7 +409,7 @@
     }
 
     .viz > p {
-        font-size: 0.7rem;
+        font-size: 0.8rem;
     }
 
     .headline {
@@ -427,21 +432,30 @@
     }
 
     .VR-video {
-        width: 40rem;
+        width: 100%; /* Gör videon responsiv */
+        max-width: 40rem; /* Begränsa maxbredden */
+        height: auto; /* Bevara proportionerna */
+    }
+
+    video::-webkit-media-controls-panel {
+        background-color: transparent !important;
+        box-shadow: none !important;
     }
 
     .vrVideoText > p {
-        margin-top: 0.7rem;
+        margin-top: 2rem;
         text-align: center;
-        font-size: 0.7rem;
+        font-size: 0.8rem; /* Gör texten lite större för bättre läsbarhet */
+        width: 90%; /* Använd procent istället för fast bredd */
+        max-width: 40rem; /* Begränsa maxbredden */
     }
 
     /* VISUALIZATIONS */
     /* .viz {
-        margin: auto;
-        height: auto;
-        width: 900px;
-    } */
+            margin: auto;
+            height: auto;
+            width: 900px;
+        } */
 
     .viz {
         margin: auto;
@@ -449,8 +463,93 @@
         width: 800px;
     }
 
-    /* Mindre skärmar */
+    /* MOBILER */
+    @media (max-width: 768px) {
+        .navName > h1 {
+            font-size: 3.5rem;
+            padding-bottom: 0.2rem;
+            margin-bottom: 0.1rem;
+        }
 
+        .videoPlay video {
+            margin-top: 5rem;
+            width: 100%;
+            max-width: 400px;
+        }
+
+        .visualization {
+            margin-top: 10px;
+        }
+
+        .viz {
+            max-width: 350px;
+        }
+    }
+
+    /* SMÅ SKÄRMAR OCH PADDOR */
+    @media (max-width: 1140px) {
+        * {
+            box-sizing: border-box;
+        }
+        .body {
+            margin: unset;
+        }
+
+        /* HAMBURGERBAR */
+
+        .navbarLinks {
+            display: none;
+        }
+
+        .navBarMenu {
+            position: relative;
+            width: 100%;
+        }
+        .navName {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%; /* Gör så att den täcker hela bredden */
+            background-color: rgb(255, 255, 255);
+            padding-top: 20px; /* Justera avstånd från toppen */
+            padding-bottom: 20px; /* Justera avstånd från botten */
+            padding-left: 10px;
+            z-index: 10;
+            display: flex;
+            flex-direction: column; /* Lägg rubrikerna i en vertikal kolumn */
+            justify-content: center; /* Centrerar vertikalt */
+            align-items: center; /* Centrerar horisontellt */
+            gap: 10px; /* Lägg till avstånd mellan rubrikerna */
+            margin: unset;
+            margin-left: 0;
+        }
+
+        .videoPlay video {
+            width: 700px;
+        }
+
+        .VR-video {
+            max-width: 30rem;
+        }
+
+        .viz {
+            width: 700px;
+        }
+
+        .viz > p {
+            font-size: 1rem;
+        }
+
+        .vrVideoText > p {
+            margin-top: 2rem;
+            text-align: center;
+            font-size: 1rem; /* Gör texten lite större för bättre läsbarhet */
+            width: 90%; /* Använd procent istället för fast bredd */
+            max-width: 40rem; /* Begränsa maxbredden */
+        }
+    }
+
+    /* Mindre skärmar */
     @media (max-width: 1500px) {
         .navBarMenu {
             position: fixed;
@@ -470,11 +569,12 @@
             width: 100%;
         }
     }
-    /* Små skärmar och mobil */
-    @media (max-width: 1140px) {
-    }
-    /* Stora skärmar */
-    @media (min-width: 1800px) {
+
+    /* STORA SKÄRMAR */
+    @media (min-width: 1500px) {
+        .content {
+            max-width: 1200px; /* Begränsa innehållets bredd på stora skärmar */
+        }
         .videoPlay {
             margin-top: 15rem;
         }

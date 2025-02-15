@@ -19,7 +19,10 @@
         <a
             href="https://www.linkedin.com/in/moa-zettervall-006587b0/"
             target="_blank"
-            ><img src="../assets/Media/linkedin.png" alt="linkedin"
+            ><img
+                src="../assets/Media/linkedin.png"
+                alt="linkedin"
+                class="linkedinIcon"
         /></a>
     </div>
 
@@ -32,7 +35,7 @@
     div {
         display: flex;
         flex-direction: column;
-        width: 30%;
+        max-width: 30rem;
         font-size: 0.8rem;
         margin: auto;
         text-align: center;
@@ -55,5 +58,49 @@
     .copyright {
         color: rgb(255, 254, 241);
         font-size: 0.7rem;
+    }
+
+    /* MOBILER */
+    @media (max-width: 768px) {
+        .copyright {
+            font-size: 0.6rem;
+        }
+
+        #p1,
+        #p2,
+        #p3 {
+            font-size: 0.8rem;
+        }
+
+        .linkedinIcon {
+            width: 2rem;
+        }
+    }
+
+    /* SMÅ SKÄRMAR OCH PADDOR */
+    @media (min-width: 768px) and (max-width: 1140px) {
+        div {
+            display: flex;
+            flex-direction: column;
+            max-width: 40rem;
+            font-size: 1rem;
+            margin: auto;
+            text-align: center;
+        }
+
+        img {
+            width: 3rem;
+        }
+        .copyright {
+            font-size: 0.8rem;
+        }
+    }
+
+    /* Mindre skärmar */
+    @media (max-width: 1500px) {
+    }
+
+    /* STORA SKÄRMAR */
+    @media (min-width: 1500px) {
     }
 </style>
