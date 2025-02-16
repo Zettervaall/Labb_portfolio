@@ -1,16 +1,13 @@
 <script setup>
-    import { ref } from 'vue';
+    import Websites from '../../components/Websites.vue';
 </script>
 
 <template>
-    <div class="body"></div>
+    <div>
+        <a href="/#"><h1>Back</h1></a>
+    </div>
+
+    <Websites />
 </template>
 
-<style scoped>
-    .body {
-        padding: 100px;
-        max-width: 100%;
-        overflow-x: hidden;
-        background-color: rgb(253, 93, 35);
-    }
-</style>
+<style scoped></style>

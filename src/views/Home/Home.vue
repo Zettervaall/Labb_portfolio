@@ -1,7 +1,16 @@
 <script setup>
-    import { ref } from 'vue';
+    /* För att synka med JSON */
+    import { ref, onMounted } from 'vue';
+    import imageData from '@/assets/images-data-vue.json'; // Här importeras JSON-filen
 
-    import Wix3 from '@/assets/Media/Wix 3.mp4';
+    const images = ref([]);
+    onMounted(() => {
+        images.value = imageData.images; // Här laddas bilderna in från JSON-filen
+    });
+
+    /*  import { ref } from 'vue';
+
+
     import VillaCaliza from '@/assets/Media/Villa Caliza.jpg';
     import BoFDalenum from '@/assets/Media/BoF Dalénum förskola.jpg';
     import Lillgardsskolan from '@/assets/Media/BoF Lillgårdsskolan i Tungelsta.jpg';
@@ -15,16 +24,26 @@
     import Port108 from '@/assets/Media/port108.jpg';
     import LinneaBarnrum from '@/assets/Media/Linnea_barnrum.jpg';
     import Sovrum02 from '@/assets/Media/sovrum_02 kopiera_low.jpg';
-    import AlviksStrand from '@/assets/Media/BoF Alviks strand.jpg';
+    import AlviksStrand from '@/assets/Media/BoF Alviks strand.jpg';*/
+    import Wix3 from '@/assets/Media/Wix 3.mp4';
     import Contact from '../../components/Contact.vue';
 
     const myVideo = ref(null);
+    const myVrVideo = ref(null);
 
     const togglePlay = () => {
         if (myVideo.value.paused) {
             myVideo.value.play();
         } else {
             myVideo.value.pause();
+        }
+    };
+
+    const togglePlay2 = () => {
+        if (myVrVideo.value.paused) {
+            myVrVideo.value.play();
+        } else {
+            myVrVideo.value.pause();
         }
     };
 </script>
@@ -74,71 +93,11 @@
 
         <section class="visualization" id="visualization">
             <h2 class="headline">Visualization</h2>
-            <div class="viz">
-                <img :src="VillaCaliza" alt="Villa Caliza" />
-                <p>Villa Caliza, Gotland</p>
-                <p>Brunnberg & Forshed Arkitektkontor</p>
-                <p>3ds Max, V-Ray, Photoshop</p>
-            </div>
-
-            <div class="viz">
-                <img :src="BoFDalenum" alt="Dalénum" />
-                <p>Dalénum school</p>
-            </div>
-
-            <div class="viz">
-                <img :src="Lillgardsskolan" alt="Lillgårdsskolan" />
-                <p>Lillgårdsskolan</p>
-            </div>
-
-            <div class="viz">
-                <img :src="VillaCaliza02" alt="Villa Caliza" />
-                <p>Villa Caliza</p>
-            </div>
-
-            <div class="viz">
-                <img :src="DinnerTable" alt="Dinner Table" />
-                <p>Viskafors</p>
-            </div>
-
-            <div class="viz">
-                <img :src="Vy01Kvall" alt="Viskafors" />
-                <p>Viskafors</p>
-            </div>
-
-            <div class="viz">
-                <img :src="Vy05" alt="Viskafors" />
-                <p>Viskafors</p>
-            </div>
-
-            <div class="viz">
-                <img :src="Vy02" alt="Viskafors" />
-                <p>Viskafors</p>
-            </div>
-
-            <div class="viz">
-                <img :src="Vy03" alt="Viskafors" />
-                <p>Viskafors</p>
-            </div>
-
-            <div class="viz">
-                <img :src="Port108" alt="Viskafors" />
-                <p>Viskafors</p>
-            </div>
-
-            <div class="viz">
-                <img :src="LinneaBarnrum" alt="Viskafors" />
-                <p>Viskafors</p>
-            </div>
-
-            <div class="viz">
-                <img :src="Sovrum02" alt="Viskafors" />
-                <p>Viskafors</p>
-            </div>
-
-            <div class="viz">
-                <img :src="AlviksStrand" alt="Viskafors" />
-                <p>Viskafors</p>
+            <div v-for="image in images" :key="image.id" class="viz">
+                <img :src="image.url" :alt="image.title" />
+                <p>{{ image.title }}</p>
+                <p>{{ image.description }}</p>
+                <p>{{ image.details }}</p>
             </div>
         </section>
 
@@ -146,11 +105,12 @@
 
         <div class="vrVideoText">
             <video
+                ref="myVrVideo"
                 class="VR-video"
                 src="/src/assets/Media/Lasse_VR.mp4"
-                ref="video-vr"
                 muted
-                controls
+                loop
+                @click="togglePlay2"
             ></video>
             <p>
                 Virtual tour of an architecturally detailed house, crafted using
