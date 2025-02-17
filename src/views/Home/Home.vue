@@ -115,40 +115,12 @@
             <p>
                 Virtual tour of an architecturally detailed house, crafted using
                 tools such as Unreal Engine, 3ds Max, V-Ray, Datasmith and
-                Photoshop. Created for Visualisera and optimized for wireless
+                Photoshop. Created for Visualisera and optimized for wireless VR
                 headsets.
             </p>
         </div>
 
-        <!--  <video ref="myVideo"
-                        autoplay
-                        muted
-                        loop
-                        @click="togglePlay"
-                        class="video-player"
-                    >
-                        <source :src="Wix3" type="video/mp4" />
-                    </video> -->
-
-        <!-- <div class="col, videoVR">
-            <div class="videoPlayVR">
-                <video
-                    ref="VRvideo"
-                    autoplay
-                    muted
-                    loop
-                    @click="togglePlay"
-                    class="video-playerVR"
-                >
-                    <source :src="Lasse_VR.avi" type="video" />
-                </video>
-                <p>
-                    Ongoing project. 3Ds Max, V-Ray, Unreal Engine & After
-                    Effects
-                </p>
-            </div>
-        </div> -->
-
+        
         <footer>
             <h5 class="headline" id="contact">Contact</h5>
             <Contact />
