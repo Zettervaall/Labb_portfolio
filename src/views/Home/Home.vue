@@ -120,9 +120,7 @@
             </p>
         </div>
 
-        
-        <footer>
-            <h5 class="headline" id="contact">Contact</h5>
+        <footer id="contact">
             <Contact />
         </footer>
     </div>
@@ -156,7 +154,11 @@
     }
     @font-face {
         font-family: MyFont7;
-        src: url(Media/Fonts/Cormorant/CormorantGaramond-LightItalic.ttf);
+        src: url(/src/assets/Media/Fonts/Roslindale-DisplayLight-Testing.ttf);
+    }
+    @font-face {
+        font-family: MyFont8;
+        src: url(/src/assets/Media/Fonts/Roslindale-DisplayMedium-Testing.ttf);
     }
 
     .body {
@@ -186,16 +188,22 @@
 
     /* NAVBAR */
     .navName {
-        font-family: MyFont5;
         display: flex;
         flex-direction: column;
         text-align: left;
         margin: 2rem;
+        white-space: pre-line;
+        font-size: 4rem;
+        margin-left: 1rem;
+        margin-top: 1rem;
         /* white-space: pre-line; */
     }
 
     .navName > h1 {
-        font-size: 4.5rem;
+        font-size: 4rem;
+        font-family: MyFont8;
+        margin-bottom: 1rem;
+        color: black;
     }
 
     #zettervall {
@@ -218,11 +226,6 @@
     /* #contact-link {
             margin-top: 2rem;
         } */
-
-    #contact {
-        padding-top: 2rem;
-        color: rgb(255, 254, 241);
-    }
 
     /* VIDEO */
     .videoPlay {
@@ -276,15 +279,10 @@
     } */
 
     .viz > p {
-        font-family: MyFont6;
-        font-size: 0.6rem;
+        font-family: MyFont5;
+        font-size: 0.8rem;
         margin-left: 25px;
         margin-bottom: 0;
-    }
-
-    footer {
-        height: 30rem;
-        background-color: rgb(18, 53, 24);
     }
 
     .navBarMenu {
@@ -306,23 +304,8 @@
         align-items: flex-start;
     }
 
-    .navName > h1 {
-        font-size: 4rem;
-        font-family: MyFont5;
-        margin-bottom: 1rem;
-        color: black;
-    }
-
     #app > div > div > div > div.col\,.navBarMenu > a {
         text-decoration: none;
-    }
-
-    /* NAVBAR */
-    .navName {
-        white-space: pre-line;
-        font-size: 4rem;
-        margin-left: 1rem;
-        margin-top: 1rem;
     }
 
     .navBarMenu {
@@ -338,10 +321,6 @@
     .navbarLinks {
         align-items: flex-start; /* Flytta länkar till vänster */
         margin-left: 1rem;
-    }
-
-    .viz > p {
-        font-size: 0.8rem;
     }
 
     .headline {
@@ -375,11 +354,14 @@
     }
 
     .vrVideoText > p {
+        font-family: MyFont5;
+        font-size: 0.8rem;
+
         margin-top: 2rem;
-        text-align: center;
-        font-size: 0.8rem; /* Gör texten lite större för bättre läsbarhet */
-        width: 90%; /* Använd procent istället för fast bredd */
-        max-width: 40rem; /* Begränsa maxbredden */
+        margin-bottom: 10rem;
+        font-size: 0.8rem;
+        width: 90%;
+        max-width: 40rem;
     }
 
     /* VISUALIZATIONS */
@@ -396,7 +378,10 @@
     }
 
     /* MOBILER */
-    @media (max-width: 768px) {
+    @media (max-width: 700px) {
+        .headline {
+            margin-top: 10rem;
+        }
         .navName > h1 {
             font-size: 3.5rem;
             padding-bottom: 0.2rem;
@@ -404,17 +389,37 @@
         }
 
         .videoPlay video {
-            margin-top: 5rem;
+            margin-top: 3rem;
             width: 100%;
             max-width: 400px;
         }
 
         .visualization {
-            margin-top: 10px;
+            margin-top: 2px;
         }
 
         .viz {
-            max-width: 350px;
+            width: 100%;
+            max-width: 380px;
+        }
+
+        .viz > p {
+            font-size: 0.5rem;
+        }
+    }
+
+    @media (min-width: 700px) and (max-width: 800px) {
+        .viz {
+            width: 100%;
+            max-width: 700px;
+        }
+        .vrVideoText > p {
+            font-family: MyFont5;
+            margin-top: 2rem;
+            margin-bottom: 10rem;
+            font-size: 1rem;
+            width: 90%;
+            max-width: 30rem;
         }
     }
 
@@ -437,6 +442,43 @@
             position: relative;
             width: 100%;
         }
+
+        .videoPlay video {
+            max-width: 700px;
+        }
+
+        .VR-video {
+            max-width: 30rem;
+        }
+
+        .viz {
+            width: 700px;
+        }
+
+        .viz > p {
+            font-size: 0.7rem;
+        }
+
+        .vrVideoText > p {
+            margin-top: 1rem;
+            font-size: 0.9rem; /* Gör texten lite större för bättre läsbarhet */
+            width: 100%; /* Använd procent istället för fast bredd */
+            max-width: 40rem; /* Begränsa maxbredden */
+        }
+    }
+
+    /* Mindre skärmar */
+    @media (max-width: 1400px) {
+        .navBarMenu {
+            position: fixed;
+            width: 100%;
+            padding-bottom: 2rem;
+        }
+
+        .navName > h1 {
+            width: 100%;
+        }
+
         .navName {
             position: fixed;
             top: 0;
@@ -454,46 +496,6 @@
             gap: 10px; /* Lägg till avstånd mellan rubrikerna */
             margin: unset;
             margin-left: 0;
-        }
-
-        .videoPlay video {
-            width: 700px;
-        }
-
-        .VR-video {
-            max-width: 30rem;
-        }
-
-        .viz {
-            width: 700px;
-        }
-
-        .viz > p {
-            font-size: 1rem;
-        }
-
-        .vrVideoText > p {
-            margin-top: 2rem;
-            text-align: center;
-            font-size: 1rem; /* Gör texten lite större för bättre läsbarhet */
-            width: 90%; /* Använd procent istället för fast bredd */
-            max-width: 40rem; /* Begränsa maxbredden */
-        }
-    }
-
-    /* Mindre skärmar */
-    @media (max-width: 1500px) {
-        .navBarMenu {
-            position: fixed;
-            width: 100%;
-            padding-bottom: 2rem;
-        }
-
-        .navName > h1 {
-            margin-top: 0;
-
-            width: 100%;
-            background-color: white;
         }
 
         .videoPlay {
