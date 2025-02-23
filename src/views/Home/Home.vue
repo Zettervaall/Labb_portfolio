@@ -8,25 +8,9 @@
         images.value = imageData.images; // Här laddas bilderna in från JSON-filen
     });
 
-    /*  import { ref } from 'vue';
-
-
-    import VillaCaliza from '@/assets/Media/Villa Caliza.jpg';
-    import BoFDalenum from '@/assets/Media/BoF Dalénum förskola.jpg';
-    import Lillgardsskolan from '@/assets/Media/BoF Lillgårdsskolan i Tungelsta.jpg';
-    import VillaCaliza02 from '@/assets/Media/Villa Caliza_02.jpg';
-
-    import DinnerTable from '@/assets/Media/DinnerTable_01.jpg';
-    import Vy01Kvall from '@/assets/Media/Vy_01_kvall.jpg';
-    import Vy05 from '@/assets/Media/Vy_05.jpg';
-    import Vy02 from '@/assets/Media/Vy02.jpg';
-    import Vy03 from '@/assets/Media/Vy03.jpg';
-    import Port108 from '@/assets/Media/port108.jpg';
-    import LinneaBarnrum from '@/assets/Media/Linnea_barnrum.jpg';
-    import Sovrum02 from '@/assets/Media/sovrum_02 kopiera_low.jpg';
-    import AlviksStrand from '@/assets/Media/BoF Alviks strand.jpg';*/
     import Wix3 from '@/assets/Media/Wix 3.mp4';
     import Contact from '../../components/Contact.vue';
+    import FrontendContent from '../../components/FrontendContent.vue';
 
     const myVideo = ref(null);
     const myVrVideo = ref(null);
@@ -64,7 +48,13 @@
                             >Visualization</a
                         >
                         <a class="nav-link" href="#VR">VR</a>
-                        <a class="nav-link" href="/Frontend">Frontend</a>
+                        <a class="nav-link" href="#Frontend">Frontend</a>
+
+                        <!-- router-link fungerar men jag vill endast visa bara en sida! -->
+
+                        <!-- <router-link class="nav-link" to="/Frontend"
+                            >Frontend</router-link
+                        > -->
                         <a class="nav-link" id="contact-link" href="#contact"
                             >Contact</a
                         >
@@ -95,9 +85,9 @@
             <h2 class="headline">Visualization</h2>
             <div v-for="image in images" :key="image.id" class="viz">
                 <img :src="image.url" :alt="image.title" />
-                <p>{{ image.title }}</p>
-                <p>{{ image.description }}</p>
-                <p>{{ image.details }}</p>
+                <p class="title">{{ image.title }}</p>
+                <p class="description">{{ image.description }}</p>
+                <p class="details">{{ image.details }}</p>
             </div>
         </section>
 
@@ -119,6 +109,10 @@
                 headsets.
             </p>
         </div>
+
+        <h4 class="headline" id="Frontend">Frontend</h4>
+
+        <FrontendContent />
 
         <footer id="contact">
             <Contact />
@@ -168,18 +162,17 @@
 
     .contentContainer {
         display: flex;
-        justify-content: center; /* Centrera horisontellt */
-        align-items: center; /* Centrera vertikalt */
-        height: calc(100vh - 20px); /* Justera höjden med eventuell padding */
+        justify-content: center;
+        align-items: center;
+        height: calc(100vh - 20px);
         padding: 10px;
         box-sizing: border-box;
-        width: calc(
-            100% - 200px
-        ); /* Säkerställ att bredden inte överskrider skärmen */
+        width: calc(100% - 200px);
     }
 
     /* Huvudrubrik centrering */
     .headline {
+        font-family: MyFont5;
         display: flex;
         justify-content: center;
         font-size: 2rem;
@@ -196,7 +189,6 @@
         font-size: 4rem;
         margin-left: 1rem;
         margin-top: 1rem;
-        /* white-space: pre-line; */
     }
 
     .navName > h1 {
@@ -223,10 +215,6 @@
         color: black;
     }
 
-    /* #contact-link {
-            margin-top: 2rem;
-        } */
-
     /* VIDEO */
     .videoPlay {
         display: flex;
@@ -234,7 +222,7 @@
         align-items: center;
         justify-content: center;
         margin-top: 10rem;
-        width: 100%; /* Video tar upp hela bredden */
+        width: 100%;
         padding: 10px;
     }
 
@@ -313,13 +301,13 @@
         position: fixed;
         margin-left: 1rem;
         margin-top: 0;
-        height: 100%; /* Full höjd */
+        height: 100%;
 
         padding: 20px;
     }
 
     .navbarLinks {
-        align-items: flex-start; /* Flytta länkar till vänster */
+        align-items: flex-start;
         margin-left: 1rem;
     }
 
@@ -329,7 +317,6 @@
 
     .visualization {
         margin-top: 100px;
-        /* background-color: brown; */
     }
 
     .vrVideoText {
@@ -343,9 +330,9 @@
     }
 
     .VR-video {
-        width: 100%; /* Gör videon responsiv */
-        max-width: 40rem; /* Begränsa maxbredden */
-        height: auto; /* Bevara proportionerna */
+        width: 100%;
+        max-width: 40rem;
+        height: auto;
     }
 
     video::-webkit-media-controls-panel {
@@ -377,8 +364,45 @@
         width: 800px;
     }
 
+    #Frontend {
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
+
     /* MOBILER */
     @media (max-width: 700px) {
+        .navName {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            padding-top: 20px;
+            padding-bottom: 4rem;
+            padding-left: 10px;
+            z-index: 10;
+            display: flex;
+            padding-left: 2rem;
+            margin: unset;
+            margin-left: 0;
+        }
+
+        .navbarLinks {
+            position: fixed;
+            z-index: 20;
+
+            display: flex;
+            flex-direction: row;
+            padding-left: 1rem;
+            margin: unset;
+            margin-top: 9rem;
+        }
+
+        .nav-link {
+            font-size: 0.9rem;
+            margin-right: 2rem;
+        }
+
         .headline {
             margin-top: 10rem;
         }
@@ -389,7 +413,7 @@
         }
 
         .videoPlay video {
-            margin-top: 3rem;
+            margin-top: 5rem;
             width: 100%;
             max-width: 400px;
         }
@@ -404,11 +428,46 @@
         }
 
         .viz > p {
-            font-size: 0.5rem;
+            font-size: 0.8rem;
         }
     }
 
     @media (min-width: 700px) and (max-width: 800px) {
+        .navName {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            padding-top: 20px;
+            padding-bottom: 2.5rem;
+            padding-left: 10px;
+            z-index: 10;
+            display: flex;
+
+            margin: unset;
+            margin-left: 0;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        .navbarLinks {
+            position: fixed;
+            z-index: 20;
+            margin-top: 6.8rem;
+            display: flex;
+            flex-direction: row;
+            right: 1rem;
+            padding-right: 1rem;
+        }
+
+        .nav-link {
+            font-size: 0.9rem;
+            margin-right: 2rem;
+        }
+
         .viz {
             width: 100%;
             max-width: 700px;
@@ -420,27 +479,6 @@
             font-size: 1rem;
             width: 90%;
             max-width: 30rem;
-        }
-    }
-
-    /* SMÅ SKÄRMAR OCH PADDOR */
-    @media (max-width: 1140px) {
-        * {
-            box-sizing: border-box;
-        }
-        .body {
-            margin: unset;
-        }
-
-        /* HAMBURGERBAR */
-
-        .navbarLinks {
-            display: none;
-        }
-
-        .navBarMenu {
-            position: relative;
-            width: 100%;
         }
 
         .videoPlay video {
@@ -456,44 +494,134 @@
         }
 
         .viz > p {
-            font-size: 0.7rem;
-        }
-
-        .vrVideoText > p {
-            margin-top: 1rem;
-            font-size: 0.9rem; /* Gör texten lite större för bättre läsbarhet */
-            width: 100%; /* Använd procent istället för fast bredd */
-            max-width: 40rem; /* Begränsa maxbredden */
+            font-size: 0.9rem;
         }
     }
 
-    /* Mindre skärmar */
-    @media (max-width: 1400px) {
-        .navBarMenu {
-            position: fixed;
-            width: 100%;
-            padding-bottom: 2rem;
+    /* SMÅ SKÄRMAR OCH PADDOR */
+    @media (min-width: 800px) and (max-width: 1140px) {
+        * {
+            box-sizing: border-box;
+        }
+        .body {
+            margin: unset;
         }
 
         .navName > h1 {
             width: 100%;
+            margin-left: 1.5rem;
         }
 
         .navName {
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%; /* Gör så att den täcker hela bredden */
+            width: 100%;
             background-color: rgb(255, 255, 255);
-            padding-top: 20px; /* Justera avstånd från toppen */
-            padding-bottom: 20px; /* Justera avstånd från botten */
+            padding-top: 20px;
+            padding-bottom: 2.5rem;
             padding-left: 10px;
             z-index: 10;
             display: flex;
-            flex-direction: column; /* Lägg rubrikerna i en vertikal kolumn */
-            justify-content: center; /* Centrerar vertikalt */
-            align-items: center; /* Centrerar horisontellt */
-            gap: 10px; /* Lägg till avstånd mellan rubrikerna */
+            justify-content: center;
+            align-items: center;
+            margin: unset;
+            margin-left: 0;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        .navbarLinks {
+            position: fixed;
+            z-index: 20;
+            margin-top: 6.8rem;
+            display: flex;
+            flex-direction: row;
+            right: 1rem;
+            padding-right: 1rem;
+        }
+
+        .nav-link {
+            font-size: 1.2rem;
+            margin-right: 2rem;
+        }
+
+        .videoPlay video {
+            margin-top: 8rem;
+            max-width: 700px;
+        }
+
+        .VR-video {
+            max-width: 30rem;
+        }
+
+        .viz {
+            width: 700px;
+        }
+
+        .viz > p {
+            font-size: 1rem;
+        }
+
+        .vrVideoText > p {
+            margin-top: 2rem;
+            margin-bottom: 10rem;
+            font-size: 1rem;
+            width: 90%;
+            max-width: 30rem;
+        }
+    }
+
+    /* Mindre skärmar */
+    @media (min-width: 1140px) and (max-width: 1450px) {
+        .navBarMenu {
+            position: fixed;
+            width: 100%;
+            padding-bottom: 2rem;
+        }
+
+        .navbarLinks {
+            position: absolute;
+            z-index: 20;
+            margin-top: 6.5rem;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-end;
+            max-width: 25rem;
+            right: 3rem;
+        }
+
+        .nav-link {
+            font-size: 1.2rem;
+            margin-right: 2rem;
+        }
+
+        .navName > h1 {
+            width: 100%;
+            margin-left: 1.5rem;
+        }
+
+        .navbar-nav {
+            margin-left: auto;
+        }
+
+        .navName {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            background-color: rgb(255, 255, 255);
+            padding-top: 20px;
+            padding-bottom: 20px;
+            padding-left: 10px;
+            z-index: 10;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+            align-items: center;
+            gap: 10px;
             margin: unset;
             margin-left: 0;
         }
@@ -507,10 +635,29 @@
     /* STORA SKÄRMAR */
     @media (min-width: 1500px) {
         .content {
-            max-width: 1200px; /* Begränsa innehållets bredd på stora skärmar */
+            max-width: 1200px;
         }
         .videoPlay {
             margin-top: 15rem;
+        }
+    }
+    @media (min-width: 2000px) {
+        .videoPlay video {
+            margin-top: 8rem;
+            width: 1100px;
+        }
+
+        .VR-video {
+            width: 1000px;
+            height: auto;
+        }
+
+        .viz {
+            width: 1000px;
+        }
+
+        .viz > p {
+            font-size: 1rem;
         }
     }
 </style>
