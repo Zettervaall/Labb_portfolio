@@ -1,0 +1,109 @@
+{
+    "images": [
+        {
+            "id": 1,
+            "url": "/Visualizations/BoF Lillgårdsskolan i Tungelsta.jpg",
+            "title": "Lillgårdsskolan, Tungelsta",
+            "description": "Brunnberg & Forshed Arkitektkontor",
+            "details": "3ds Max, V-Ray, Photoshop"
+        },
+        {
+            "id": 2,
+            "url": "/Visualizations/BoF Dalénum förskola.jpg",
+            "title": "Dalénum förskola",
+            "description": "Brunnberg & Forshed Arkitektkontor",
+            "details": "3ds Max, V-Ray, Photoshop"
+        },
+        {
+            "id": 3,
+            "url": "/Visualizations/BoF Arvika_2.jpg",
+            "title": "Posten 1, Arvika",
+            "description": "Brunnberg & Forshed Arkitektkontor",
+            "details": "3ds Max, V-Ray, Photoshop"
+        },
+        {
+            "id": 4,
+            "url": "/Visualizations/Vy02.jpg",
+            "title": "Port 108, Stockholm",
+            "description": "Brunnberg & Forshed Arkitektkontor",
+            "details": "3ds Max, V-Ray, Photoshop"
+        },
+        {
+            "id": 5,
+            "url": "/Visualizations/Vy03.jpg",
+            "title": "Port 108, Stockholm",
+            "description": "Brunnberg & Forshed Arkitektkontor",
+            "details": "3ds Max, V-Ray, Photoshop"
+        },
+        {
+            "id": 6,
+            "url": "/Visualizations/Vy_02_2.jpg",
+            "title": "Källsprångsvägen, Viskafors",
+            "description": "Brunnberg & Forshed Arkitektkontor",
+            "details": "3ds Max, V-Ray, Photoshop"
+        },
+        {
+            "id": 7,
+            "url": "/Visualizations/Vy_05.jpg",
+            "title": "Hälsans hus, Högsätra",
+            "description": "Brunnberg & Forshed Arkitektkontor",
+            "details": "3ds Max, V-Ray, Photoshop"
+        },
+        {
+            "id": 8,
+            "url": "/Visualizations/Villa-Caliza.jpg",
+            "title": "Villa Caliza, Gotland",
+            "description": "Brunnberg & Forshed Arkitektkontor",
+            "details": "3ds Max, V-Ray, Photoshop"
+        },
+        {
+            "id": 9,
+            "url": "/Visualizations/Villa Caliza_02.jpg",
+            "title": "Villa Caliza, Gotland",
+            "description": "Brunnberg & Forshed Arkitektkontor",
+            "details": "3ds Max, V-Ray, Photoshop"
+        },
+        {
+            "id": 10,
+            "url": "/Visualizations/Vy_01 (2).jpg",
+            "title": "Villa Caliza, Gotland",
+            "description": "Brunnberg & Forshed Arkitektkontor",
+            "details": "3ds Max, V-Ray, Photoshop"
+        },
+        {
+            "id": 11,
+            "url": "/Visualizations/sovrum_02 kopiera_low.jpg",
+            "title": "Personal project",
+            "description": "Brunnberg & Forshed Arkitektkontor",
+            "details": "3ds Max, V-Ray, Photoshop"
+        },
+        {
+            "id": 12,
+            "url": "/Visualizations/Orgelpipan_Vy01_02.jpg",
+            "title": "Orgelpipan, Stockholm",
+            "description": "Brunnberg & Forshed Arkitektkontor",
+            "details": "3ds Max, V-Ray, Photoshop"
+        },
+        {
+            "id": 13,
+            "url": "/Visualizations/Vy_01_kvall.jpg",
+            "title": "Svanholmsparken, Stockholm",
+            "description": "Brunnberg & Forshed Arkitektkontor",
+            "details": "3ds Max, V-Ray, Photoshop"
+        },
+        {
+            "id": 14,
+            "url": "/Visualizations/DinnerTable_01.jpg",
+            "title": "Personal project",
+            "description": "Brunnberg & Forshed Arkitektkontor",
+            "details": "3ds Max, V-Ray, Photoshop"
+        },
+        {
+            "id": 15,
+            "url": "/Visualizations/BoF Alviks strand.jpg",
+            "title": "Alviks strand, Stockholm",
+            "description": "Brunnberg & Forshed Arkitektkontor",
+            "details": "3ds Max, V-Ray, Photoshop"
+        }
+    ]
+}

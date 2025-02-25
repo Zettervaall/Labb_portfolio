@@ -1,11 +1,20 @@
 <script setup>
     /* För att synka med JSON */
     import { ref, onMounted } from 'vue';
-    import imageData from '@/assets/images-data-vue.json'; // Här importeras JSON-filen
 
     const images = ref([]);
-    onMounted(() => {
-        images.value = imageData.images; // Här laddas bilderna in från JSON-filen
+    onMounted(async () => {
+        try {
+            const response = await fetch('/images-data-vue.json'); // Här hämtas JSON-filen
+            if (!response.ok) {
+                throw new Error('Misslyckades att hämta JSON');
+            }
+            const data = await response.json();
+            console.log('Laddade bilder:', data.images);
+            images.value = data.images; // Här tilldelas data till images
+        } catch (error) {
+            console.error('Fel vid laddning av JSON:', error);
+        }
     });
 
     import Wix3 from '@/assets/Media/Wix 3.mp4';
