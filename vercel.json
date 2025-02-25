@@ -15,8 +15,8 @@
     ],
     "routes": [
         {
-            "src": "/Visualizations/(.*)",
-            "dest": "/public/Visualizations/$1"
+            "src": "/images-data-vue.json",
+            "dest": "/public/images-data-vue.json"
         }
     ]
 }
