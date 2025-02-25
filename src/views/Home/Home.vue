@@ -97,6 +97,7 @@
                 <p class="title">{{ image.title }}</p>
                 <p class="description">{{ image.description }}</p>
                 <p class="details">{{ image.details }}</p>
+                <p>{{ image.url }}</p>
             </div>
         </section>
 
