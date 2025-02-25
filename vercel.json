@@ -1,0 +1,19 @@
+{
+    "version": 2,
+    "builds": [
+        {
+            "src": "public/**/*",
+            "use": "@vercel/static"
+        },
+        {
+            "src": "index.html",
+            "use": "@vercel/static-build"
+        }
+    ],
+    "routes": [
+        {
+            "src": "/Visualizations/(.*)",
+            "dest": "/public/Visualizations/$1"
+        }
+    ]
+}
