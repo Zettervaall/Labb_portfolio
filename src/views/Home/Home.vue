@@ -77,7 +77,6 @@
                         autoplay
                         muted
                         loop
-                        @click="togglePlay"
                         class="video-player"
                     >
                         <source :src="Wix3" type="video/mp4" />
@@ -423,8 +422,7 @@
 
         .videoPlay video {
             margin-top: 5rem;
-            width: 100%;
-            max-width: 400px;
+            width: 85%;
         }
 
         .visualization {
@@ -491,7 +489,7 @@
         }
 
         .videoPlay video {
-            max-width: 700px;
+            width: 85%;
         }
 
         .VR-video {
@@ -559,7 +557,7 @@
 
         .videoPlay video {
             margin-top: 8rem;
-            max-width: 700px;
+            width: 85%;
         }
 
         .VR-video {
@@ -636,7 +634,7 @@
         }
 
         .videoPlay {
-            margin-top: 14rem;
+            margin-top: 17rem;
             width: 100%;
         }
     }
