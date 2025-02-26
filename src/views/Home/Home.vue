@@ -132,27 +132,27 @@
     /* FONTS */
     @font-face {
         font-family: MyFont;
-        src: url(Media/Quinsi.ttf);
+        src: url(/src/assets/Media/Fonts/Quinsi.ttf);
     }
     @font-face {
         font-family: MyFont2;
-        src: url(Media/HenriDidot.otf);
+        src: url(/src/assets/Media/Fonts/HenriDidot.otf);
     }
     @font-face {
         font-family: MyFont3;
-        src: url(Media/Dosis-Medium.ttf);
+        src: url(/src/assets/Media/Fonts/Dosis-Medium.ttf);
     }
     @font-face {
         font-family: MyFont4;
-        src: url(Media/Fonts/Cormorant/CormorantGaramond-Regular.ttf);
+        src: url(/src/assets/Media/Fonts/Cormorant/CormorantGaramond-Regular.ttf);
     }
     @font-face {
         font-family: MyFont5;
-        src: url(Media/Fonts/Cormorant/CormorantGaramond-Bold.ttf);
+        src: url(/src/assets/Media/Fonts/Cormorant/CormorantGaramond-Bold.ttf);
     }
     @font-face {
         font-family: MyFont6;
-        src: url(Media/Fonts/Cormorant/CormorantGaramond-Light.ttf);
+        src: url(/src/assets/Media/Fonts/Cormorant/CormorantGaramond-Light.ttf);
     }
     @font-face {
         font-family: MyFont7;
