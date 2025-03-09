@@ -568,7 +568,7 @@
     }
 
     /* SMÅ SKÄRMAR OCH PADDOR */
-    @media (min-width: 800px) and (max-width: 1140px) {
+    @media (min-width: 800px) and (max-width: 1145px) {
         * {
             box-sizing: border-box;
         }
@@ -644,7 +644,7 @@
     }
 
     /* Mindre skärmar */
-    @media (min-width: 1140px) and (max-width: 1450px) {
+    @media (min-width: 1145px) and (max-width: 1450px) {
         .navBarMenu {
             position: fixed;
             width: 200px;
