@@ -32,11 +32,15 @@
         }
     };
 
+    const showPlayButton2 = ref(true);
+
     const togglePlay2 = () => {
         if (myVrVideo.value.paused) {
             myVrVideo.value.play();
+            showPlayButton2.value = false; // Dölj knappen när videon spelas
         } else {
             myVrVideo.value.pause();
+            showPlayButton2.value = true; // Visa knappen igen om videon pausas
         }
     };
 </script>
@@ -102,14 +106,37 @@
         <h3 class="headline" id="VR">VR</h3>
 
         <div class="vrVideoText">
-            <video
-                ref="myVrVideo"
-                class="VR-video"
-                src="/src/assets/Media/Lasse_VR.mp4"
-                muted
-                loop
-                @click="togglePlay2"
-            ></video>
+            <div class="video-container">
+                <video
+                    ref="myVrVideo"
+                    class="VR-video"
+                    src="/src/assets/Media/Lasse_VR.mp4"
+                    muted
+                    loop
+                ></video>
+
+                <!-- Den osynliga overlay-diven som fångar klick -->
+                <div class="click-overlay" @click="togglePlay2"></div>
+
+                <!-- Den visuella play-knappen -->
+                <button
+                    v-if="showPlayButton2"
+                    @click="togglePlay2"
+                    class="play-button"
+                >
+                    <svg
+                        width="30"
+                        height="30"
+                        viewBox="0 0 24 24"
+                        fill="black"
+                        xmlns="http://www.w3.org/2000/svg"
+                        style="pointer-events: none"
+                    >
+                        <path d="M8 5v14l11-7z" />
+                    </svg>
+                </button>
+            </div>
+
             <p>
                 Virtual tour of an architecturally detailed house, crafted using
                 tools such as Unreal Engine, 3ds Max, V-Ray, Datasmith and
@@ -224,6 +251,13 @@
     }
 
     /* VIDEO */
+
+    .video-container {
+        position: relative;
+        display: inline-block;
+        z-index: 1;
+    }
+
     .videoPlay {
         display: flex;
         flex-direction: column;
@@ -232,6 +266,34 @@
         margin-top: 10rem;
         width: 100%;
         padding: 10px;
+    }
+
+    .click-overlay {
+        position: absolute;
+        top: 0;
+        left: 0;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        cursor: pointer;
+    }
+
+    .play-button {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        width: 50px;
+        height: 50px;
+        background: rgba(255, 255, 255, 0.342);
+        border: none;
+        border-radius: 50%;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        z-index: 999;
+        transition: background 0.3s ease;
     }
 
     .videoPlay video {
@@ -284,7 +346,7 @@
     .navBarMenu {
         width: 100%; /* Gör navbaren fullbredd på små skärmar */
         position: absolute;
-
+        z-index: 1000;
         padding: 10px;
     }
     .contentContainer {
@@ -585,57 +647,111 @@
     @media (min-width: 1140px) and (max-width: 1450px) {
         .navBarMenu {
             position: fixed;
-            width: 100%;
-            padding-bottom: 2rem;
+            width: 200px;
+            margin-left: 1rem;
+            margin-top: 0;
+            height: 100%;
+            padding: 20px;
+            z-index: 1000;
         }
 
-        .navbarLinks {
-            position: absolute;
-            z-index: 20;
-            margin-top: 6.5rem;
-            display: flex;
-            flex-direction: row;
-            justify-content: flex-end;
-            max-width: 25rem;
-            right: 3rem;
-        }
-
-        .nav-link {
-            font-size: 1.2rem;
-            margin-right: 2rem;
-        }
-
-        .navName > h1 {
-            width: 100%;
-            margin-left: 1.5rem;
-        }
-
-        .navbar-nav {
-            margin-left: auto;
-        }
-
-        .navName {
+        /* Nytt: ett separat block bakom navName */
+        .navName::before {
+            content: '';
             position: fixed;
             top: 0;
             left: 0;
-            width: 100%;
-            background-color: rgb(255, 255, 255);
-            padding-top: 20px;
-            padding-bottom: 20px;
-            padding-left: 10px;
-            z-index: 10;
+            width: 100vw;
+            height: 15rem; /* justera om du behöver exaktare höjd */
+            background-color: white;
+            z-index: -1;
+        }
+
+        .navName {
             display: flex;
             flex-direction: column;
-            justify-content: center;
+            text-align: left;
+            margin: 2rem 0 0 1rem;
+            font-size: 4rem;
+            z-index: 1001;
+        }
+
+        .navName > h1 {
+            font-size: 4rem;
+            font-family: MyFont8;
+            margin-bottom: 1rem;
+            color: black;
+        }
+
+        .navbarLinks {
+            margin-top: 1rem;
+            display: flex;
+            flex-direction: column;
+            align-items: flex-start;
+            margin-left: 1rem;
+            z-index: 1001;
+        }
+
+        .nav-link {
+            font-family: MyFont5;
+            margin-bottom: 1rem;
+            text-decoration: none;
+            color: black;
+            font-size: 1.2rem;
+        }
+
+        /* VR-video fixen */
+        .video-container {
+            position: relative;
+            z-index: 1;
+        }
+
+        .VR-video {
+            pointer-events: none !important;
+            z-index: 1;
+            max-width: 35rem;
+        }
+
+        .click-overlay {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: 10;
+            pointer-events: auto;
+            background-color: transparent;
+        }
+
+        .play-button {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            z-index: 20;
+            width: 80px;
+            height: 80px;
+            background: rgba(255, 255, 255, 0.5);
+            border: none;
+            border-radius: 50%;
+            display: flex;
             align-items: center;
-            gap: 10px;
-            margin: unset;
-            margin-left: 0;
+            justify-content: center;
+            cursor: pointer;
         }
 
         .videoPlay {
             margin-top: 17rem;
             width: 100%;
+        }
+
+        .viz {
+            width: 90%;
+            max-width: 850px;
+        }
+
+        .viz > p {
+            font-size: 0.9rem;
         }
     }
 

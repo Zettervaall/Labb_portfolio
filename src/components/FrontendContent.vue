@@ -129,13 +129,25 @@
             padding: 0;
         }
 
+        .perfumeVideo {
+            max-width: 20rem;
+        }
+
+        .granoVideo {
+            max-width: 15rem;
+        }
+
+        .projectText h1 {
+            margin-top: 2rem;
+        }
+
         .projectText p {
             font-size: 0.8rem;
             display: flex;
             justify-content: center;
             flex-direction: column;
             padding: 0 2rem 0rem 2rem;
-            margin-bottom: 3rem;
+            margin-bottom: 5rem;
         }
         /* Project 1 */
         .projekt1 {
