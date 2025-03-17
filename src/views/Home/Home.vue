@@ -112,6 +112,7 @@
                     ref="myVrVideo"
                     class="VR-video"
                     src="/src/assets/Media/Lasse_VR.mp4"
+                    playsinline
                     muted
                     loop
                 ></video>

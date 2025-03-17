@@ -23,7 +23,14 @@
 <template>
     <div class="frontendWork">
         <div class="projekt1">
-            <video ref="perfumeVideo" autoplay loop muted class="perfumeVideo">
+            <video
+                ref="perfumeVideo"
+                autoplay
+                playsinline
+                loop
+                muted
+                class="perfumeVideo"
+            >
                 <source
                     src="/src/assets/Media/Projekt1 parfym_2.mp4"
                     type="video/mp4"
@@ -43,7 +50,14 @@
             </div>
         </div>
         <div class="projekt2">
-            <video ref="myProjectVideo" muted loop autoplay class="granoVideo">
+            <video
+                ref="myProjectVideo"
+                muted
+                loop
+                playsinline
+                autoplay
+                class="granoVideo"
+            >
                 <source
                     src="/src/assets/Media/Grano_projekt3.mp4"
                     type="video/mp4"
