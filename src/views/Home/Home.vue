@@ -79,6 +79,7 @@
                     <video
                         ref="myVideo"
                         autoplay
+                        playsinline
                         muted
                         loop
                         class="video-player"
