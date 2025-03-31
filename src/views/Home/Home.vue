@@ -112,6 +112,7 @@
                     ref="myVrVideo"
                     class="VR-video"
                     src="/src/assets/Media/Lasse_VR.mp4"
+                    poster="/src/assets/Media/thumbnail_VR.png"
                     playsinline
                     muted
                     loop
@@ -226,6 +227,7 @@
         font-size: 4rem;
         margin-left: 1rem;
         margin-top: 1rem;
+        background-color: white;
     }
 
     .navName > h1 {
@@ -233,6 +235,7 @@
         font-family: MyFont8;
         margin-bottom: 1rem;
         color: black;
+        background-color: white;
     }
 
     #zettervall {
@@ -462,21 +465,26 @@
         .navbarLinks {
             position: fixed;
             z-index: 20;
-
             display: flex;
             flex-direction: row;
-            padding-left: 1rem;
+            justify-content: center;
+            align-items: center;
+
+            width: 100%;
             margin: unset;
             margin-top: 9rem;
+            /* background-color: rgb(0, 0, 0);
+            border-radius: 4px; */
         }
 
         .nav-link {
             font-size: 0.9rem;
-            margin-right: 2rem;
+            margin: 0 5px;
+            /* color: white; */
         }
 
         .headline {
-            margin-top: 10rem;
+            margin-top: 6rem;
         }
         .navName > h1 {
             font-size: 3.5rem;
@@ -484,13 +492,17 @@
             margin-bottom: 0.1rem;
         }
 
+        #zettervall {
+            margin-top: -1rem;
+        }
+
         .videoPlay video {
             margin-top: 5rem;
             width: 85%;
         }
 
-        .visualization {
-            margin-top: 2px;
+        .videoPlay > p {
+            font-size: 0.6rem;
         }
 
         .viz {
@@ -625,7 +637,7 @@
         }
 
         .VR-video {
-            max-width: 30rem;
+            max-width: 25rem;
         }
 
         .viz {
@@ -646,7 +658,7 @@
     }
 
     /* Mindre skärmar */
-    @media (min-width: 1145px) and (max-width: 1450px) {
+    @media (min-width: 1145px) and (max-width: 1950px) {
         .navBarMenu {
             position: fixed;
             width: 200px;
@@ -711,7 +723,7 @@
         .VR-video {
             pointer-events: none !important;
             z-index: 1;
-            max-width: 35rem;
+            max-width: 29rem;
         }
 
         .click-overlay {
@@ -758,7 +770,7 @@
     }
 
     /* STORA SKÄRMAR */
-    @media (min-width: 1500px) {
+    @media (min-width: 1950px) {
         .content {
             max-width: 1200px;
         }

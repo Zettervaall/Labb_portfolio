@@ -230,7 +230,7 @@
         }
         .projectText p {
             align-items: center;
-            width: 50rem;
+            width: 40rem;
         }
     }
     @media (min-width: 1500px) and (max-width: 1900px) {
