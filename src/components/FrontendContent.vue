@@ -183,7 +183,7 @@
         }
     }
 
-    @media (min-width: 768px) and (max-width: 1500px) {
+    @media (min-width: 768px) and (max-width: 1950px) {
         .frontendWork {
             z-index: -1;
             margin-top: 1rem;
@@ -233,7 +233,7 @@
             width: 40rem;
         }
     }
-    @media (min-width: 1500px) and (max-width: 1900px) {
+    /*     @media (min-width: 1500px) and (max-width: 1900px) {
         .frontendWork {
             z-index: -1;
             margin-top: 5rem;
@@ -250,7 +250,7 @@
             padding: 0;
             margin-bottom: 3rem;
         }
-    }
+    } */
     @media (min-width: 2400px) {
         .projectText {
             font-size: 1rem;
