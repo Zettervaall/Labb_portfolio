@@ -45,6 +45,7 @@
     }
 
     .websiteFooter {
+        z-index: 10000000;
         margin: 1rem;
         background-color: black;
         position: relative;
