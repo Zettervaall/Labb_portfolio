@@ -21,7 +21,7 @@
         </div>
     </div>
 
-    <p class="copyright">© 2024 Moa Zettervall. Designed & built by me.</p>
+    <p class="copyright">&copy; 2024 Moa Zettervall. Designed & built by me.</p>
 
     <!-- <h1>Contact</h1> -->
     <!-- <p id="p1">
