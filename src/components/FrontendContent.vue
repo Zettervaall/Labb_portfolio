@@ -92,6 +92,10 @@
         position: relative;
     }
 
+    .cit {
+        font-size: 50%;
+    }
+
     .frontendWork video {
         margin: 1rem;
     }
@@ -110,6 +114,7 @@
         margin-top: 5rem;
         display: flex;
         justify-content: center;
+        font-style: italic;
     }
 
     /* Project 1 */
