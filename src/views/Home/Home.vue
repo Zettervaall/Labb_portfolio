@@ -110,7 +110,7 @@
                 <video
                     ref="myVrVideo"
                     class="VR-video"
-                    src="/src/assets/Media/Lasse_VR.mp4"
+                    src="/src/assets/Media/VR_tour.mp4"
                     muted
                     loop
                 ></video>
