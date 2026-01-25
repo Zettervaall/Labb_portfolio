@@ -23,7 +23,14 @@
 <template>
     <div class="frontendWork">
         <div class="projekt1">
-            <video ref="perfumeVideo" autoplay loop muted class="perfumeVideo">
+            <video
+                ref="perfumeVideo"
+                autoplay
+                playsinline
+                loop
+                muted
+                class="perfumeVideo"
+            >
                 <source
                     src="/src/assets/Media/Projekt1 parfym_2.mp4"
                     type="video/mp4"
@@ -43,7 +50,14 @@
             </div>
         </div>
         <div class="projekt2">
-            <video ref="myProjectVideo" muted loop autoplay class="granoVideo">
+            <video
+                ref="myProjectVideo"
+                muted
+                loop
+                playsinline
+                autoplay
+                class="granoVideo"
+            >
                 <source
                     src="/src/assets/Media/Grano_projekt3.mp4"
                     type="video/mp4"
@@ -78,6 +92,10 @@
         position: relative;
     }
 
+    .cit {
+        font-size: 50%;
+    }
+
     .frontendWork video {
         margin: 1rem;
     }
@@ -96,6 +114,7 @@
         margin-top: 5rem;
         display: flex;
         justify-content: center;
+        font-style: italic;
     }
 
     /* Project 1 */
@@ -169,7 +188,7 @@
         }
     }
 
-    @media (min-width: 768px) and (max-width: 1500px) {
+    @media (min-width: 768px) and (max-width: 1950px) {
         .frontendWork {
             z-index: -1;
             margin-top: 1rem;
@@ -216,10 +235,10 @@
         }
         .projectText p {
             align-items: center;
-            width: 50rem;
+            width: 40rem;
         }
     }
-    @media (min-width: 1500px) and (max-width: 1900px) {
+    /*     @media (min-width: 1500px) and (max-width: 1900px) {
         .frontendWork {
             z-index: -1;
             margin-top: 5rem;
@@ -236,7 +255,7 @@
             padding: 0;
             margin-bottom: 3rem;
         }
-    }
+    } */
     @media (min-width: 2400px) {
         .projectText {
             font-size: 1rem;
