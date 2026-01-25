@@ -16,12 +16,12 @@
                 <p class="p3">moa.zettervall@gmail.com</p>
             </div>
             <div class="footerName">
-                <p>MZ</p>
+                <p>MZ | Portfolio</p>
             </div>
         </div>
     </div>
 
-    <p class="copyright">&copy; 2025 Moa Zettervall. Designed & built by me.</p>
+    <p class="copyright">&copy; {{ new Date().getFullYear() }} Moa Zettervall</p>
 
     <!-- <h1>Contact</h1> -->
     <!-- <p id="p1">

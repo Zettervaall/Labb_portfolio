@@ -394,6 +394,10 @@
         margin-top: 100px;
     }
 
+    #VR{
+        margin-top: 10rem;
+    }
+
     .vrVideoText {
         display: flex;
         flex-direction: column;
@@ -510,6 +514,10 @@
 
         .viz > p {
             font-size: 0.8rem;
+        }
+
+        .VR-video{
+            max-width: 20rem;
         }
     }
 
@@ -641,7 +649,7 @@
         }
 
         .VR-video {
-            max-width: 25rem;
+            max-width: 30rem;
         }
 
         .viz {
