@@ -67,10 +67,14 @@
         width: 4.5rem;
         height: 4.5rem;
         border-radius: 50%;
-        background: rgba(255, 255, 255, 0.85);
+        background: rgba(255, 255, 255, 0.375);
         display: flex;
         align-items: center;
         justify-content: center;
+    }
+
+    .vrVideoWrap:hover .playIcon {
+        background: rgba(255, 255, 255, 0.496);
     }
 
     .playIcon svg {
