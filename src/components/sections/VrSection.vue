@@ -9,8 +9,8 @@
         <div class="vrVideoWrap">
             <ZoomableVideo
                 class="VR-video"
-                src="/public/VR/VR_tour.mp4"
-                poster="/public/VR/thumbnail_VR.png"
+                src="/VR/VR_tour.mp4"
+                poster="/VR/thumbnail_VR.png"
                 :autoplay="false"
             />
             <span class="playIcon" aria-hidden="true">

@@ -12,7 +12,7 @@
         <ProjectCard
             title="help me choose"
             label="Degree project · String"
-            video="/public/Frontend/Help-me-choose-REC-2.mp4"
+            video="/Frontend/Help-me-choose-REC-2.mp4"
             layout="stacked"
         >
             <p>
@@ -78,7 +78,7 @@
         <!-- GRANÖ -->
         <ProjectCard
             title="GRANÖ"
-            video="/public/Frontend/Grano_projekt3.mp4"
+            video="/Frontend/Grano_projekt3.mp4"
             layout="reversed"
             small
         >
@@ -98,7 +98,7 @@
         <!-- la senteur -->
         <ProjectCard
             title="la senteur"
-            video="/public/Frontend/Projekt1 parfym_2.mp4"
+            video="/Frontend/Projekt1 parfym_2.mp4"
             layout="normal"
         >
             <p>
