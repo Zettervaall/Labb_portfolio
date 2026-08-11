@@ -1,0 +1,17 @@
+/* ==========================================================================
+   Global design tokens
+   Imported once in main.js so every component can use them.
+   (Font @font-face declarations live in src/App.vue.)
+   ========================================================================== */
+
+:root {
+    /* Typefaces (semantic names — swap the value, not every component) */
+    --font-display: MyFont5; /* headings & body (falls back to serif) */
+
+    /* Spacing */
+    --project-gap: 5rem; /* space on each side of the divider between projects */
+
+    /* Project separator (the thin line between projects) */
+    --divider-width: 2rem;
+    --divider-opacity: 0.72;
+}

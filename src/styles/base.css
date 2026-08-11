@@ -1,0 +1,26 @@
+/* ==========================================================================
+   Base / shared styles used across sections.
+   Imported once in main.js (after tokens.css).
+   ========================================================================== */
+
+/* Section heading ("Visualization", "VR", "Frontend").
+   Individual sections may override margin-top via their #id. */
+.headline {
+    font-family: var(--font-display);
+    display: flex;
+    justify-content: center;
+    font-size: 2rem;
+    margin: 20rem auto auto;
+}
+
+@media (max-width: 700px) {
+    .headline {
+        margin-top: 6rem;
+    }
+}
+
+@media (min-width: 800px) and (max-width: 1500px) {
+    * {
+        box-sizing: border-box;
+    }
+}
