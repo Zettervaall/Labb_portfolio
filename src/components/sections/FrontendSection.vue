@@ -12,7 +12,7 @@
         <ProjectCard
             title="help me choose"
             label="Degree project · String"
-            video="/src/assets/Media/Help-me-choose-REC-2.mp4"
+            video="/public/Frontend/Help-me-choose-REC-2.mp4"
             layout="stacked"
         >
             <p>
@@ -72,13 +72,13 @@
                 </div>
             </ExpandableSection>
         </ProjectCard>
-        
+
         <hr class="projectDivider" />
 
         <!-- GRANÖ -->
         <ProjectCard
             title="GRANÖ"
-            video="/src/assets/Media/Grano_projekt3.mp4"
+            video="/public/Frontend/Grano_projekt3.mp4"
             layout="reversed"
             small
         >
@@ -98,7 +98,7 @@
         <!-- la senteur -->
         <ProjectCard
             title="la senteur"
-            video="/src/assets/Media/Projekt1 parfym_2.mp4"
+            video="/public/Frontend/Projekt1 parfym_2.mp4"
             layout="normal"
         >
             <p>
