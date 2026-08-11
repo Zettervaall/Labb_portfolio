@@ -26,7 +26,7 @@
 
 <style scoped>
     .websiteFooter {
-        z-index: 10000000;
+        z-index: 1001;
         margin: 1rem;
         background-color: black;
         position: relative;
@@ -34,10 +34,8 @@
 
     .contactFooter {
         margin-top: 0.5rem;
-
         height: 5rem;
         line-height: 5rem;
-
         color: rgb(255, 254, 241);
         display: flex;
         justify-content: space-between;
