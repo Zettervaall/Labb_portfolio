@@ -44,10 +44,6 @@
 </template>
 
 <style scoped>
-    .visualization {
-        margin-top: 100px;
-    }
-
     .viz {
         margin: auto;
         height: auto;
@@ -61,7 +57,7 @@
         height: auto;
         padding: 25px;
         padding-bottom: 5px;
-        margin-top: 3rem;
+        margin-top: var(--heading-content-gap);
         cursor: pointer;
     }
 
@@ -77,6 +73,10 @@
         .viz {
             width: 100%;
             max-width: 380px;
+        }
+
+        .viz > img {
+            margin-top: var(--heading-content-gap-mobile);
         }
 
         .viz > p {

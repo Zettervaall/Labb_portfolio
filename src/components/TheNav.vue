@@ -52,7 +52,6 @@
         font-family: var(--font-heading);
         margin-bottom: 1rem;
         color: black;
-        background-color: white;
     }
 
     #zettervall {

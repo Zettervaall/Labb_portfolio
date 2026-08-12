@@ -12,6 +12,13 @@
     /* Spacing */
     --project-gap: 5rem; /* space on each side of the divider between projects */
 
+    /* Vertical rhythm around the section headings (Visualization / Frontend / VR).
+       Change these to space the whole page out or tighten it — one place. */
+    --section-gap: 10rem; /* space ABOVE each section heading (desktop) */
+    --section-gap-mobile: 5rem; /* ... on mobile */
+    --heading-content-gap: 3rem; /* space between a heading and its content (desktop) */
+    --heading-content-gap-mobile: 1rem; /* ... on mobile */
+
     /* Project separator (the thin line between projects) */
     --divider-width: 2rem;
     --divider-opacity: 0.72;

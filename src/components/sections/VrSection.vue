@@ -31,16 +31,12 @@
 </template>
 
 <style scoped>
-    #VR {
-        margin-top: 10rem;
-    }
-
     .vrVideoText {
         display: flex;
         flex-direction: column;
         align-items: center;
         justify-content: center;
-        margin-top: 3rem;
+        margin-top: var(--heading-content-gap);
         width: 100%;
         padding: 10px;
         font-family: var(--font-body);
@@ -112,6 +108,10 @@
 
     /* MOBILE */
     @media (max-width: 768px) {
+        .vrVideoText {
+            margin-top: var(--heading-content-gap-mobile);
+        }
+
         .projectText p {
             font-size: 0.8rem;
         }

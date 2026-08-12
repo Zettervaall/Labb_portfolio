@@ -118,12 +118,11 @@
 
 <style scoped>
     #Frontend {
-        margin-top: 10rem;
         margin-bottom: 1rem;
     }
 
     .frontendWork {
-        margin-top: 5rem;
+        margin-top: var(--heading-content-gap);
         display: flex;
         flex-direction: column;
         gap: var(--project-gap);
@@ -183,7 +182,7 @@
     /* MOBILE */
     @media (max-width: 768px) {
         .frontendWork {
-            margin-top: 1rem;
+            margin-top: var(--heading-content-gap-mobile);
             justify-content: center;
             padding: 0;
         }
