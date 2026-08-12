@@ -6,7 +6,8 @@
 
 :root {
     /* Typefaces (semantic names — swap the value, not every component) */
-    --font-display: MyFont5; /* headings & body (falls back to serif) */
+    --font-body: 'Quicksand', sans-serif; /* all text & subheadings */
+    --font-heading: 'Playfair Display', serif; /* name, navbar & section headings */
 
     /* Spacing */
     --project-gap: 5rem; /* space on each side of the divider between projects */

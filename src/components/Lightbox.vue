@@ -151,27 +151,31 @@
         stroke-linecap: round;
     }
 
-    /* Prev/next arrows (visualization gallery only). */
+    /* Prev/next arrows (visualization gallery only) — just the arrow, no ring. */
     .navBtn {
         position: absolute;
         top: 50%;
         transform: translateY(-50%);
         z-index: 2;
-        width: 3rem;
-        height: 3rem;
         border: none;
-        border-radius: 50%;
-        background: rgba(255, 255, 255, 0.101);
-        color: #000;
+        background: none;
+        padding: 0.5rem;
+        color: #fff;
         cursor: pointer;
         display: flex;
-        align-items: center;
-        justify-content: center;
-        padding: 0;
+        opacity: 0.75;
+        transition: opacity 0.2s ease, transform 0.2s ease;
+        -webkit-tap-highlight-color: transparent;
+    }
+
+    .navBtn:focus,
+    .navBtn:focus-visible {
+        outline: none;
     }
 
     .navBtn:hover {
-        background: #ffffff85;
+        opacity: 1;
+        transform: translateY(-50%) scale(1.2);
     }
 
     .navBtn.prev {
@@ -183,13 +187,14 @@
     }
 
     .navBtn svg {
-        width: 45%;
-        height: 45%;
+        width: 2.25rem;
+        height: 2.25rem;
         fill: none;
         stroke: currentColor;
         stroke-width: 2.5;
         stroke-linecap: round;
         stroke-linejoin: round;
+        filter: drop-shadow(0 1px 3px rgba(0, 0, 0, 0.6));
     }
 
     /* Mobile: use almost the full width. */
@@ -210,9 +215,9 @@
             font-size: 1rem;
         }
 
-        .navBtn {
-            width: 2.5rem;
-            height: 2.5rem;
+        .navBtn svg {
+            width: 1.75rem;
+            height: 1.75rem;
         }
 
         .navBtn.prev {

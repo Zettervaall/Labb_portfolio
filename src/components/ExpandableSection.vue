@@ -34,7 +34,7 @@
     }
 
     .toggleBtn {
-        font-family: MyFont5;
+        font-family: var(--font-body);
         font-size: 0.9rem;
         background: none;
         border: none;

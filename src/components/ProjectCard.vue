@@ -47,7 +47,7 @@
 
 <style scoped>
     .project {
-        font-family: var(--font-display);
+        font-family: var(--font-body);
     }
 
     .project video {
@@ -66,8 +66,18 @@
         height: auto;
     }
 
+    /* help me choose (the featured, stacked project) gets a subtle frame like
+       the Figma video below it. The top spacing moves to margin so the border
+       hugs the video instead of wrapping the padding. */
+    .project--stacked video {
+        border: 1px solid rgba(0, 0, 0, 0.08);
+        padding-top: 0;
+        margin-top: 3rem;
+    }
+
     .projectText h1 {
         margin-top: 2rem;
+        font-size: 2rem;
         display: flex;
         justify-content: center;
         font-style: italic;

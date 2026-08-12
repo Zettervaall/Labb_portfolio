@@ -49,7 +49,7 @@
 
     .navName > h1 {
         font-size: 4rem;
-        font-family: MyFont8;
+        font-family: var(--font-heading);
         margin-bottom: 1rem;
         color: black;
         background-color: white;
@@ -68,7 +68,7 @@
     }
 
     .nav-link {
-        font-family: MyFont5;
+        font-family: var(--font-heading);
         margin-bottom: 1rem;
         text-decoration: none;
         color: black;
@@ -223,7 +223,7 @@
 
         .navName > h1 {
             font-size: 4rem;
-            font-family: MyFont8;
+            font-family: var(--font-heading);
             margin-bottom: 1rem;
             color: black;
         }
@@ -238,7 +238,7 @@
         }
 
         .nav-link {
-            font-family: MyFont5;
+            font-family: var(--font-heading);
             margin-bottom: 1rem;
             text-decoration: none;
             color: black;

@@ -50,7 +50,7 @@
     .footerName {
         margin-left: auto;
         display: flex;
-        font-family: MyFont8;
+        font-family: var(--font-body);
         position: absolute;
         right: 1.5rem;
         align-items: center;

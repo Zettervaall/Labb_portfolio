@@ -129,7 +129,7 @@
         gap: var(--project-gap);
         padding: 0 20rem 0 20rem;
         position: relative;
-        font-family: var(--font-display);
+        font-family: var(--font-body);
     }
 
     /* Subtle separator between projects. The flex `gap` above puts an equal

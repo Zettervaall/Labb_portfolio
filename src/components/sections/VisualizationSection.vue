@@ -66,7 +66,7 @@
     }
 
     .viz > p {
-        font-family: MyFont5;
+        font-family: var(--font-body);
         font-size: 0.8rem;
         margin-left: 25px;
         margin-bottom: 0;
