@@ -198,7 +198,7 @@
     }
 
     /* SMALL SCREENS & TABLETS */
-    @media (min-width: 800px) and (max-width: 1500px) {
+    @media (min-width: 800px) and (max-width: 1599px) {
         .navName > h1 {
             width: 100%;
             margin-left: 1.5rem;
@@ -239,7 +239,7 @@
     }
 
     /* SMALLER DESKTOPS */
-    @media (min-width: 1500px) and (max-width: 1950px) {
+    @media (min-width: 1600px) and (max-width: 1950px) {
         .navBarMenu {
             position: fixed;
             width: 200px;
@@ -298,7 +298,7 @@
        .navBarMenu wrapper is still a full-height fixed box on the left.
        Let clicks pass through it (to videos, buttons, etc.) while keeping
        the name and the links themselves clickable. */
-    @media (max-width: 1499px) {
+    @media (max-width: 1599px) {
         .navBarMenu {
             pointer-events: none;
         }
@@ -309,10 +309,12 @@
         }
     }
 
-    /* MOBILE — once scrolled down, collapse into a compact top bar:
+    /* TOP-BAR SIZES (mobile, tablets & small laptops, i.e. below the sidebar
+       breakpoint) — once scrolled down, collapse into a compact top bar:
        small "Moa Zettervall" on the left, the section links on the right.
-       Scrolling back to the top restores the big stacked name. */
-    @media (max-width: 700px) {
+       This keeps a solid white bar with dark text (no inversion) over the dark
+       band. Scrolling back to the top restores the big name. */
+    @media (max-width: 1599px) {
         .navBarMenu.scrolled {
             pointer-events: auto;
             position: fixed;
@@ -321,7 +323,7 @@
             width: 100%;
             height: auto;
             margin: 0;
-            padding: 0.55rem 1.1rem;
+            padding: 0.85rem 1.75rem;
             display: flex;
             flex-direction: row;
             align-items: center;
@@ -350,7 +352,7 @@
         }
 
         .navBarMenu.scrolled .navName > h1 {
-            font-size: 1.15rem;
+            font-size: 1.2rem;
             margin: 0;
             padding: 0;
         }
@@ -368,8 +370,8 @@
         }
 
         .navBarMenu.scrolled .nav-link {
-            margin: 0 0 0 0.7rem;
-            font-size: 0.8rem;
+            margin: 0 0 0 0.9rem;
+            font-size: .8rem;
         }
     }
 </style>

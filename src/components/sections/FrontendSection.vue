@@ -10,7 +10,7 @@
     <div class="frontendWork">
         <!-- Degree project -->
         <ProjectCard
-            title="String Furniture · Degree project"
+            title="String Furniture"
             video="/Frontend/Help-me-choose-REC-2.mp4"
             layout="stacked"
             dark
