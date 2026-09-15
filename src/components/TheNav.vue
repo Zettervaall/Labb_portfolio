@@ -374,4 +374,21 @@
             font-size: .8rem;
         }
     }
+
+    /* Medium screens (tablets & small laptops): bigger collapsed text than the
+       mobile sizes above. Mobile (≤700px) keeps the smaller sizes. */
+    @media (min-width: 701px) and (max-width: 1599px) {
+        .navBarMenu.scrolled {
+            padding: 1rem 2rem;
+        }
+
+        .navBarMenu.scrolled .navName > h1 {
+            font-size: 1.8rem;
+        }
+
+        .navBarMenu.scrolled .nav-link {
+            margin-left: 1.4rem;
+            font-size: 1.1rem;
+        }
+    }
 </style>
