@@ -38,10 +38,10 @@
         font-size: 0.9rem;
         background: none;
         border: none;
-        border-bottom: 1px solid #2d2e2b;
+        border-bottom: 1px solid currentColor;
         padding: 0 0 0.3rem 0;
         cursor: pointer;
-        color: #2d2e2b;
+        color: inherit; /* follows the surrounding text (light on the dark band) */
         display: inline-flex;
         align-items: center;
         gap: 0.5rem;

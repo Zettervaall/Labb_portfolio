@@ -8,7 +8,7 @@
         <div class="videoPlay">
             <ZoomableVideo :src="Wix3" />
             <p>
-                Ongoing project. 3Ds Max, V-Ray, Unreal Engine & After Effects
+                Ongoing project. 3ds Max, V-Ray, Unreal Engine & After Effects
             </p>
         </div>
     </div>

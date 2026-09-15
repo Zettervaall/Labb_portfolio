@@ -96,7 +96,6 @@
         font-size: 2rem;
         display: flex;
         justify-content: center;
-        font-style: italic;
     }
 
     .projectText p {

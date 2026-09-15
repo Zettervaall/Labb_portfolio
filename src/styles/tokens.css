@@ -22,4 +22,8 @@
     /* Project separator (the thin line between projects) */
     --divider-width: 2rem;
     --divider-opacity: 0.72;
+
+    /* Dark "spotlight" band (the featured String project) */
+    --dark-bg: #1a1815;
+    --dark-text: #f4f2ec;
 }

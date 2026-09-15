@@ -10,10 +10,10 @@
     <div class="frontendWork">
         <!-- Degree project -->
         <ProjectCard
-            title="help me choose"
-            label="Degree project · String"
+            title="String Furniture · Degree project"
             video="/Frontend/Help-me-choose-REC-2.mp4"
             layout="stacked"
+            dark
         >
             <p>
                 My degree project, carried out at String, where I designed
@@ -77,7 +77,7 @@
 
         <!-- GRANÖ -->
         <ProjectCard
-            title="GRANÖ"
+            title="GRANÖ · UX/UI"
             video="/Frontend/Grano_projekt3.mp4"
             layout="reversed"
             small
@@ -97,7 +97,7 @@
 
         <!-- la senteur -->
         <ProjectCard
-            title="la senteur"
+            title="la senteur · API integration"
             video="/Frontend/Projekt1 parfym_2.mp4"
             layout="normal"
         >
@@ -162,17 +162,18 @@
         align-items: center;
     }
 
+    /* This project sits on the dark band, so the frame + caption are light. */
     .figmaVideo video {
         width: 100%;
         max-width: 40rem;
         height: auto;
-        border: 1px solid rgba(0, 0, 0, 0.08);
+        border: 1px solid rgba(255, 255, 255, 0.15);
     }
 
     .figmaVideo figcaption {
         margin-top: 0.5rem;
         font-size: 0.85rem;
-        opacity: 0.55;
+        opacity: 0.7;
     }
 
     .stringVideo {

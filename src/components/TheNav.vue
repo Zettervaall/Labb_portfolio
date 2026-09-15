@@ -1,9 +1,43 @@
 <script setup>
     // Fixed sidebar / top bar: the name and the section links.
+    // On mobile it collapses into a compact top bar once you scroll down.
+    // It also turns light while it sits over the dark project band.
+    import { ref, onMounted, onBeforeUnmount } from 'vue';
+
+    const scrolled = ref(false);
+    const onDark = ref(false);
+
+    function update() {
+        const y = window.scrollY || document.documentElement.scrollTop || 0;
+        scrolled.value = y > 120;
+
+        // Is the name currently sitting over the dark "spotlight" band?
+        const dark = document.querySelector('.project--dark');
+        const name = document.querySelector('.navName');
+        if (dark && name) {
+            const d = dark.getBoundingClientRect();
+            const n = name.getBoundingClientRect();
+            const nameMid = (n.top + n.bottom) / 2;
+            onDark.value = d.top <= nameMid && d.bottom >= nameMid;
+        } else {
+            onDark.value = false;
+        }
+    }
+
+    onMounted(() => {
+        window.addEventListener('scroll', update, { passive: true });
+        window.addEventListener('resize', update);
+        update();
+    });
+
+    onBeforeUnmount(() => {
+        window.removeEventListener('scroll', update);
+        window.removeEventListener('resize', update);
+    });
 </script>
 
 <template>
-    <div class="navBarMenu">
+    <div class="navBarMenu" :class="{ scrolled, onDark }">
         <a href="#">
             <div class="navName">
                 <h1 id="moa">Moa</h1>
@@ -44,7 +78,8 @@
         font-size: 4rem;
         margin-left: 1rem;
         margin-top: 1rem;
-        background-color: white;
+        /* No white box on desktop — the mobile/tablet top bars set their own
+           white background in their media queries below. */
     }
 
     .navName > h1 {
@@ -71,6 +106,20 @@
         margin-bottom: 1rem;
         text-decoration: none;
         color: black;
+    }
+
+    /* When the fixed nav sits over the dark project band, flip it to light
+       (white name + links, no white box) so it stays readable. */
+    .navBarMenu.onDark .navName {
+        background: transparent;
+    }
+
+    .navBarMenu.onDark .navName > h1 {
+        color: var(--dark-text);
+    }
+
+    .navBarMenu.onDark .nav-link {
+        color: var(--dark-text);
     }
 
     /* MOBILE */
@@ -257,6 +306,70 @@
         .navName,
         .navbarLinks {
             pointer-events: auto;
+        }
+    }
+
+    /* MOBILE — once scrolled down, collapse into a compact top bar:
+       small "Moa Zettervall" on the left, the section links on the right.
+       Scrolling back to the top restores the big stacked name. */
+    @media (max-width: 700px) {
+        .navBarMenu.scrolled {
+            pointer-events: auto;
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: auto;
+            margin: 0;
+            padding: 0.55rem 1.1rem;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+            justify-content: space-between;
+            background-color: #fff;
+            z-index: 1000;
+        }
+
+        /* Mobile keeps a solid white bar with dark text, even over the dark band
+           (the opaque bar covers it, so the text stays readable). */
+        .navBarMenu.scrolled.onDark .navName > h1,
+        .navBarMenu.scrolled.onDark .nav-link {
+            color: black;
+        }
+
+        /* Name: small and on one line, at the far left. */
+        .navBarMenu.scrolled .navName {
+            position: static;
+            flex-direction: row;
+            align-items: baseline;
+            gap: 0.35rem;
+            width: auto;
+            margin: 0;
+            padding: 0;
+            background: none;
+        }
+
+        .navBarMenu.scrolled .navName > h1 {
+            font-size: 1.15rem;
+            margin: 0;
+            padding: 0;
+        }
+
+        .navBarMenu.scrolled #zettervall {
+            margin-top: 0;
+        }
+
+        /* Links: on the right, on the same row. */
+        .navBarMenu.scrolled .navbarLinks {
+            position: static;
+            flex-direction: row;
+            width: auto;
+            margin: 0;
+        }
+
+        .navBarMenu.scrolled .nav-link {
+            margin: 0 0 0 0.7rem;
+            font-size: 0.8rem;
         }
     }
 </style>
